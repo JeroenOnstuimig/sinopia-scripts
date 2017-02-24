@@ -1,17 +1,17 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          Sinopia npm server
+# Provides:          Verdaccio npm server
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
 # Short-Description: Start Sinpia npm server
-# Description:       Sinopia server
+# Description:       Verdaccio server
 ### END INIT INFO
 
 dir=""
-user="sinopia"
-cmd="/usr/bin/sinopia -c /etc/sinopia/config.yaml"
+user="verdaccio"
+cmd="/usr/bin/verdaccio -c /etc/verdaccio/config.yaml"
 
 name=`basename $0`
 pid_file="/var/run/$name.pid"
